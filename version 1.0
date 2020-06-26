@@ -1,0 +1,191 @@
+Algoritmo claculadora_verdad
+	definir p Como Logico
+	definir q Como Logico
+	definir r Como Logico
+	Escribir "bienvenido a la prueba"
+	Escribir "1.- inicio"
+	Escribir "2.- cancelar"
+	leer op
+	segun op 
+		1: 
+			Escribir "eliga una opcion"
+			Escribir "1.- dos variables."
+			Escribir "2.- tres variables."
+			leer op2
+			segun op2
+				1:
+					
+					Escribir "1.- conjuncion."
+					Escribir"2.- disyuncion."
+					Escribir"3.- implicacion."
+					leer op3
+					segun op3
+						1:
+							Dimension p[4]
+							Dimension q[4]
+							para i<-1 hasta 4 con paso 1 Hacer
+									Escribir "ingrese un valor para p"	
+									leer p[i]
+							fin para
+							para iy<- 1 hasta 4 con paso 1 Hacer
+								Escribir "ingrese un valor para q"	
+								leer q[iy]
+							FinPara
+							      Escribir    " p " "        " " q " "       " "p and q "      
+							para i<- 1 hasta 2 con paso 1 Hacer
+								para iy<- 1 hasta 2 con paso 1 Hacer
+									Escribir p[i], " " , q[iy] , " " p[i] y q[iy]
+								FinPara
+							fin para
+						2:
+							Dimension p[4]
+							Dimension q[4]
+							para i<-1 hasta 4 con paso 1 Hacer
+								Escribir "ingrese un valor para p"	
+								leer p[i]
+								
+							fin para
+							para iy<- 1 hasta 4 con paso 1 Hacer
+								Escribir "ingrese un valor para q"	
+								leer q[iy]
+							FinPara
+							Escribir    " p " "        " " q " "       " "p or q "      
+							para i<- 1 hasta 2 con paso 1 Hacer
+								para iy<- 1 hasta 2 con paso 1 Hacer
+									
+									Escribir p[i], " " , q[iy] , " " p[i] o q[iy]
+								FinPara
+							fin para
+						3:
+							Dimension p[2]
+							Dimension q[2]
+							definir red Como Logico
+							para i<-1 hasta 2 con paso 1 Hacer
+								Escribir "ingrese un valor para p"	
+								leer p[i]
+								
+							fin para
+							para iy<- 1 hasta 2 con paso 1 Hacer
+								Escribir "ingrese un valor para q"	
+								leer q[iy]
+							FinPara  
+							Escribir    " p " "        " " q " "         "   "p -> q "
+							para i<- 1 hasta 2 con paso 1 Hacer
+								para iy<- 1 hasta 2 con paso 1 Hacer
+									si p[i] = verdadero y q[iy] = Falso
+										red <- Falso
+									sino 
+										si p[i]= falso y q[iy] = Verdadero
+											red<- Verdadero
+										SiNo
+											red<- verdadero
+										FinSi
+									FinSi
+									Escribir p[i], " " , q[iy] , " ", "  " " " " ",red
+								FinPara
+							fin para
+					FinSegun
+				2:
+					Escribir "1.- conjuncion."
+					Escribir"2.- disyuncion."
+					Escribir"3.- implicacion."
+					leer op4
+					segun op4
+						1:
+							Dimension p[8]
+							Dimension q[8]
+							dimension r[8]
+							para i<-1 hasta 8 con paso 1 Hacer
+								Escribir "ingrese un valor para p"	
+								leer p[i]
+							fin para
+							para iy<- 1 hasta 8 con paso 1 Hacer
+								Escribir "ingrese un valor para q"	
+								leer q[iy]
+		
+							FinPara
+							para z<- 1 hasta 8 con paso 1 Hacer
+								Escribir "ingrese un valor para r"	
+								leer r[z]
+								
+							FinPara
+							Escribir    " p " "        " " q " " "       "  " "r" "   " "(p and q)  and r"      
+							para i<- 1 hasta 2 con paso 1 Hacer
+								para iy<- 1 hasta 2  con paso 1 
+									para z<- 1 hasta 2 con paso 1 Hacer
+										Escribir p[i], " " , q[iy] , " ", r[z], "   ",  p[i] y q[iy] y r[z]
+									FinPara
+								FinPara
+							fin para						
+						2:
+							Dimension p[8]
+							Dimension q[8]
+							dimension r[8]
+							para i<-1 hasta 8 con paso 1 Hacer
+								Escribir "ingrese un valor para p"	
+								leer p[i]
+							fin para
+							para iy<- 1 hasta 8 con paso 1 Hacer
+								Escribir "ingrese un valor para q"	
+								leer q[iy]
+								
+							FinPara
+							para z<- 1 hasta 8 con paso 1 Hacer
+								Escribir "ingrese un valor para r"	
+								leer r[z]
+								
+							FinPara
+							Escribir    " p " "        " " q " " "       "  " "r" "   " "(p and q)  and r"      
+							para i<- 1 hasta 2 con paso 1 Hacer
+								para iy<- 1 hasta 2  con paso 1 
+									para z<- 1 hasta 2 con paso 1 Hacer
+										Escribir p[i], " " , q[iy] , " ", r[z], "   ",  p[i] o q[iy] o r[z]
+									FinPara
+								FinPara
+							fin para						
+						3:	
+							Dimension p[8]
+							Dimension q[8]
+							dimension r[8]
+							definir red Como Logico
+							para i<-1 hasta 2 con paso 1 Hacer
+								Escribir "ingrese un valor para p"	
+								leer p[i]
+								
+							fin para
+							para iy<- 1 hasta 2 con paso 1 Hacer
+								Escribir "ingrese un valor para q"	
+								leer q[iy]
+							FinPara  
+							para z<- 1 hasta 2 con paso 1 Hacer
+								Escribir "ingrese un valor para r"	
+								leer r[z]
+							FinPara  
+							Escribir    " p " "        " " q " "         "   "p -> q "
+							para i<- 1 hasta 2 con paso 1 Hacer
+								para iy<- 1 hasta 2 con paso 1 Hacer
+									para z<- 1 hasta 2 con paso 1 Hacer
+										si p[i] = Falso y q[iy] = verdadero y r[z] = Falso
+											red <- falso
+										sino 
+											si p[i]= Verdadero y q[iy] = Verdadero y r[z] = Falso  
+												red<- Falso
+											SiNo
+										      red<- verdadero
+											FinSi
+										FinSi
+										Escribir p[i], " " , q[iy] , " ",r[z] " " "  " " " " ",red
+									FinPara
+								FinPara
+							fin para					  
+					FinSegun
+					
+		     FinSegun
+		2:
+			Escribir  "pulse enter"
+			Esperar Tecla
+		De Otro Modo:
+			Escribir "ERROR"
+	FinSegun
+	
+FinAlgoritmo
